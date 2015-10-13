@@ -1,0 +1,25 @@
+{% if ajax == false %}
+	{% include 'header.html.twig' %}
+{% endif %}
+<div class="signIn">
+	<label>Identifiant</label>
+	<input type="text" id="signId">
+	<span class="clearfix"></span>
+	<label>Pseudo</label>
+	<input type="text" id="signPseudo">
+	<span class="clearfix"></span>
+	<label>Password</label>
+	<input type="password" id="signPassword">
+	<span class="clearfix"></span>
+	<label>Confirmé le password</label>
+	<input type="password" id="signPassword2">
+	<span class="clearfix"></span>
+	<label>Mail (optionel)</label>
+	<input type="email" id="signEmail">
+	<span class="clearfix"></span>
+	<input type="button" id="signInOk" value="inscription">
+	<span class="signInRetour"></span>
+</div>
+{% if ajax == false %}
+	{% include 'footer.html.twig' %}
+{% endif %}

@@ -1,0 +1,36 @@
+		{% if ajax == false %}
+			{% include 'header.html.twig' %}
+		{% endif %}
+		<div class="path">
+			<div class="back" data-target="accueil" data-id="0">Accueil</div>
+			<div class="back" data-target="topics" data-id="{{ msgs[0].getCateId }}">{{ msgs[0].getCateName }}</div>
+		</div>
+		<div class="topic">
+			{% for msg in msgs %}
+			<div class="msg">
+				<div>
+					<h3>
+						{% if msg.getUserPseudo() != null %}
+							{{ msg.getUserPseudo() }}
+						{% else %}
+							Ano
+						{% endif %}
+					</h3>
+					<span>{{ msg.getDateCrea() }}</span>
+					<span>{{ msg.getDateLastChange() }}</span>
+					<div class="clearfix"></div>
+				</div>
+				<p>{{ msg.getContent() }}</p>
+				<input type="hidden" data-user="{{ msg.getUserId() }}" data-msg="{{ msg.getId() }}" data-topic="{{ msg.getTopicId() }}">
+			</div>
+			{% endfor %}
+			<div class="answer">
+				<textarea></textarea>
+				<input type="button" value="répondre">
+				<span class="clearfix"></span>
+			</div>
+		</div>
+		{% if ajax == false %}
+			{% include 'footer.html.twig' %}
+		{% endif %}
+	

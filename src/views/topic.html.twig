@@ -1,0 +1,34 @@
+		{% if ajax == false %}
+			{% include 'header.html.twig' %}
+		{% endif %}
+		<div class="path">
+			<div class="back" data-target="Acceuil" data-id="0">Accueil</div>
+			{% if session['pseudo'] is defined %}
+				<input type="button" value ="Nouveau topic" id="newTopic" data-cateName="{{ cateName }}" data-cateId="{{ cateId }}">
+			{% endif %}
+		</div>
+		<div class="categoris">
+			{% if topics is defined %}
+				{% for topic in topics %}
+					<div class="categori" id="{{ topic.getId() }}" data-target="inTopic">
+						<h3>{{ topic.getName() }}</h3>
+						<span class="author"> de {{ topic.getAuthor() }}</span>
+						{% if session['pseudo'] is defined and topic.getIsUpToDate() != '1' %}
+							<i class="fa fa-envelope"></i>
+						{% else %}
+							<i class="fa fa-envelope-o"></i>
+						{% endif %}
+						<span class="lastMsg">dernier message de {{ topic.getLastMsgUser() }} le {{ topic.getLastMsgDate() }}</span>
+						<br>
+						<span class="lastMsg">{{ topic.getNbrMsg() }} messages</span>
+						<span class="clearfix"></span>
+					</div>
+				{% endfor %}
+			{% else %}
+				<p>Cette categorie est actuelment vide</p>
+			{% endif %}
+		</div>
+		{% if ajax == false %}
+			{% include 'footer.html.twig' %}
+		{% endif %}
+	

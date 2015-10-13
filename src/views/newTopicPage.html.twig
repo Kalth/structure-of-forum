@@ -1,0 +1,15 @@
+{% if ajax == false %}
+	{% include 'header.html.twig' %}
+{% endif %}
+<div class="newTopic">
+	<label class="titre newTopicLabel">Titre</label>
+	<input type="text" class="titre newTopicInput">
+	<span class="clearfix"></span>
+	<label class="newTopicMsg newTopicLabel">Message</label>
+	<textarea class="newTopicMsg newTopicInput"></textarea>
+	<span class="clearfix"></span>
+	<input type="button" id="sendNewTopic" value="Envoyé" data-id="{{ cateId }}">
+</div>
+{% if ajax == false %}
+	{% include 'footer.html.twig' %}
+{% endif %}

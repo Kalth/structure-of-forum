@@ -1,0 +1,18 @@
+		{% if ajax == false %}
+			{% include 'header.html.twig' %}
+		{% endif %}
+		<div class="categoris">
+		{% for categorie in categories %}
+			<div class="categori" id="{{ categorie.getId() }}" data-target="topics">
+				<h3>{{ categorie.getName() }}</h3>
+				<p>{{ categorie.getDescri() }}</p>
+				<span class="lastMsg">dernier message de {{ categorie.getPseudo() }} le {{ categorie.getLastMsg() }}</span>
+				<br>
+				<span class="lastMsg">Dans le sujet {{ categorie.getTopicName() }}
+				<span class="clearfix"></span>
+			</div>
+		{% endfor %}
+		</div>
+		{% if ajax == false %}
+			{% include 'footer.html.twig' %}
+		{% endif %}

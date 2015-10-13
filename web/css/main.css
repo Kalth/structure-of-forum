@@ -1,0 +1,290 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	background-color: #ccc;
+}
+
+header {
+	background-color: #ccc;
+	height: 170px;
+	text-align: center;
+}
+
+input[type="button"] {
+	font-weight: bold;
+	padding: 0.3em;
+	border-radius: 10px;
+}
+
+#userMenu {
+	float: right;
+	font-weight: bold;
+	padding: 0.3em;
+	border-radius: 10px;
+}
+
+#logOut {
+	position: absolute;
+	bottom: 0.5em;
+	left: 0.5em;
+	font-weight: bold;
+	padding: 0.3em;
+	border-radius: 10px;
+}
+
+.logDiv {
+	position:relative;
+	text-align: left;
+	padding: 0.5em;
+	font-weight: bold;
+	margin: 0.5em;
+	float: right;
+	height: 200px;
+	width: 300px;
+	background-color: #aaa;
+	display: inline;
+}
+
+.logDiv input {
+	float: right;
+}
+
+#logIn {
+	position: absolute;
+	bottom: 30%;
+	right: 0.5em;
+}
+
+#signIn {
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+}
+
+.logDiv p {
+	padding: 0.5em;
+	font-size: 1.2em;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.new {
+	display: inline-block;
+	position: absolute;
+	bottom: 0.5em;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2.5em;
+	padding: 0.5em 0;
+	margin: 0 auto;
+	width: 40%;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.8em;
+	margin: 0 auto;
+	width: 40%;
+}
+
+.logDiv {
+
+}
+
+footer {
+	background-color: #ccc;
+	height: 190px;
+	text-align: center;
+}
+
+#userListe {
+	width: 150px;
+	height: 150px;
+	background-color: #aaa;
+	display: inline-block;
+	margin: 0.5em;
+	float: left;
+}
+
+#forumStats {
+	width: 150px;
+	height: 150px;
+	background-color: #aaa;
+	float: right;
+	display: inline-block;
+	margin: 0.5em;
+}
+
+main {
+	background-color: #999;
+	padding: 1em 5em;
+}
+
+/** accueil **/
+
+.categoris {
+	border: 5px solid #fff;
+	border-radius: 5px;
+	padding: 0 0.5em;
+}
+
+.categori {
+	border: 2px solid #fff;
+	border-radius: 5px;
+	padding: 0.5em;
+	margin: 0.5em 0;
+	height: 3.5em;
+}
+
+.categori h3 {
+	font-size: 1.5em;
+	display: inline-block;
+}
+
+.categori p {
+	font-size: 0.8em;
+	display: inline-block;
+}
+
+.lastMsg {
+	float: right;
+	display: inline-block;
+}
+
+.path {
+	position: relative;
+	height: 2.6em;
+	border: 5px solid #fff;
+	border-radius: 0.3em;
+	margin: 0 0 0.8em 0;
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.3em;
+}
+
+.path div {
+	min-width: 7em;
+	max-width: 15em;
+	margin: 0.25em;
+	display: inline-block;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.path input {
+	position: absolute;
+	right: 0.125em;
+	top: 0.125em;
+	display: inline-block;
+}
+
+/** InTopic **/
+
+.topic {
+	padding: 0.5em;
+}
+
+.msg {
+	min-height: 250px;
+	background-color: #888;
+	border-radius: 15px;
+	margin: 1.5em ;
+}
+
+.msg div {
+	width: 100%;
+	background-color: #aaa;
+	height: 2.4em;
+	border-radius: 15px;
+	padding: 0.3em
+}
+
+.msg div span {
+	float: right;
+	font-size: 0.8em;
+	padding: 0.2em;
+}
+
+.msg div h3 {
+	padding: 0.15em 0.15em 0.15em 0.8em;
+	float: left;
+	font-size: 1.4em;
+}
+
+.answer textarea {
+	width: 95%;
+	max-width: 100%;
+	margin: 1em auto 0.5em;
+	height: 6em;
+	display: block;
+
+}
+
+.answer input {
+	font-weight: bold;
+	padding: 0.3em;
+	border-radius: 10px;
+	float: right;
+} 
+
+.msg p {
+	padding: 0.8em;
+	font-size: 1.3em;
+}
+
+/** SignInPage **/
+
+.signIn label {
+	width: 140px;
+	display: inline-block;
+	margin: 1em 0;
+}
+
+/** NewTopicPage **/
+
+.newTopic {
+	position: relative;
+	height: 25em;
+}
+
+.newTopic textarea {
+	width: 80%;
+	max-width: 80%;
+	height: 17em;
+	display: block;
+}
+
+.newTopicLabel {
+	display: inline-block;
+	position: absolute;
+	left: 2em;
+	font-weight: bold;
+}
+
+.newTopicInput {
+	display: inline-block;
+	position: absolute;
+	left: 7em;
+}
+
+.titre {
+	top: 2em;
+}
+
+.newTopicMsg {
+	top: 5em;
+}
+
+.newTopic input[type="button"] {
+	position: absolute;
+	bottom: 0.5em;
+	right: 9em;
+}
+

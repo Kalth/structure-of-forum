@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Forum - {{ pageName }}</title>
+		<meta charset="utf-8">
+		<link href="css/reset.css" rel="stylesheet">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="logDiv">
+				{% if session['pseudo'] is defined %}
+					<p>{{ session['pseudo'] }}</p>
+					<input type="button" value="menu" id="userMenu">
+					<input type="button" value="deconection" id="logOut">
+				{% else %}
+					<label>identifiant</label>
+					<input type="text" id="identifiant">
+					<span class="clearfix"></span>
+					<label>password</label>
+					<input type="password" id="password">
+					<span class="clearfix"></span>
+					<input type="button" id="logIn" value="connexion">
+					<span id="logInMsg"></span>
+					<span class="clearfix"></span>
+					<label class="new">Nouveaux?</label>
+					<input class="new" type="button" id="signIn" value="inscription">
+				{% endif %}
+			</div>
+			<h1>Forum je ne sais pas sur quoi</h1>
+			<h2>{{pageName}}</h2>
+			<div class="clearfix"></div>
+		</header>
+		<div class="clearfix"></div>
+		<main>
